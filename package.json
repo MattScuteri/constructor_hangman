@@ -1,0 +1,20 @@
+{
+  "name": "constructor_hangman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hangman.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattScuteri/constructor_hangman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattScuteri/constructor_hangman/issues"
+  },
+  "homepage": "https://github.com/MattScuteri/constructor_hangman#readme"
+}
