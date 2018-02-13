@@ -13,6 +13,9 @@ function Letter(wordLetters, guessedLetters, matchedLetters, totalGuesses, wordL
 			wordLength[i].push("_ ");
 		};
 	};
+	this.printWord = function() {
+		console.log("YOUR WORD" + splitWord());
+	}
 };
 
 module.exports = Letter;
