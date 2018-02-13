@@ -11,12 +11,9 @@ const fiftyStates = ["Alabama", "Alaska", "Arizona", "Arkansas", "California",
 "Tennessee", "Texas", "Utah", "Vermont", "Washington", 
 "West Virginia", "Wisconsin", "Wyoming"];
 
-function Word(wordInPlay) {
+function Word(wordInPlay, currentWord) {
 	this.wordInPlay = Math.floor(Math.random()*fiftyStates.length);
-};
-
-Word.prototype.printInfo = function() {
-	console.log(this.wordInPlay);
-};
+	this.currentWord = (fiftyStates[this.wordInPlay]);
+};	
 
 module.exports = Word;
