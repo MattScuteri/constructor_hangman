@@ -2,11 +2,11 @@ const inquirer = require('inquirer');
 const Word = require('./word.js');
 
 function Letter(wordLength) {
-	let selectedWord = new Word(Word.currentWord);
+	let selectedWord = Word.passWord();	
 	this.wordLength = selectedWord.length;
 	this.splitWord = function() {
-		selectedWord = selectedWord + "";
-		select = selectedWord.split("");
+		this.wordLength = this.wordLength + "";
+		select = this.wordLength.split("");
 		for (let i = 0; i < select.Length; i++) {
 			select[i].push("_ ");
 		};
@@ -14,9 +14,10 @@ function Letter(wordLength) {
 	this.printWord = function() {
 		console.log("YOUR WORD: " + this.splitWord());
 	}
+	console.log(selectedWord);
 };
 
-const currentLetter = new Letter(Letter);
+const currentLetter = new Letter;
 
 currentLetter.printWord();
 
