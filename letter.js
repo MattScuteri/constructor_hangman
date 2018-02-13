@@ -1,11 +1,7 @@
 const inquirer = require('inquirer');
 const Word = require('./word.js');
 
-function Letter(wordLetters, guessedLetters, matchedLetters, totalGuesses, wordLength) {
-	this.wordLetters = [];
-	this.guessedLetters = [];
-	this.matchedLetters = [];
-	this.totalGuesses = 7;
+function Letter(wordLength) {
 	this.wordLength = Word.length;
 	this.splitWord = function() {
 		Word.split(" ")
