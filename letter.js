@@ -2,16 +2,22 @@ const inquirer = require('inquirer');
 const Word = require('./word.js');
 
 function Letter(wordLength) {
-	this.wordLength = Word.length;
+	let selectedWord = new Word(Word.currentWord);
+	this.wordLength = selectedWord.length;
 	this.splitWord = function() {
-		Word.split(" ")
-		for (let i = 0; i < wordLength; i++) {
-			wordLength[i].push("_ ");
+		selectedWord = selectedWord + "";
+		select = selectedWord.split("");
+		for (let i = 0; i < select.Length; i++) {
+			select[i].push("_ ");
 		};
 	};
 	this.printWord = function() {
-		console.log("YOUR WORD" + splitWord());
+		console.log("YOUR WORD: " + this.splitWord());
 	}
 };
+
+const currentLetter = new Letter(Letter);
+
+currentLetter.printWord();
 
 module.exports = Letter;
