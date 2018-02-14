@@ -9,16 +9,14 @@ function Letter(wordLength) {
 		for (let i = 0; i < wordLength.length; i++) {
 			blankArray.push("_ ");
 		};
+		console.log(selectedWord.currentWord);
+		console.log(wordLength)
+		console.log("YOUR WORD: " + blankArray);
 	};
-	this.printWord = function() {
-		console.log("YOUR WORD: " + this.splitWord());
-	}
-	console.log(selectedWord.currentWord);
-	console.log(wordLength)
 };
 
 const currentLetter = new Letter();
 
-currentLetter.printWord();
+currentLetter.splitWord();
 
 module.exports = Letter;
