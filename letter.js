@@ -3,19 +3,18 @@ const Word = require('./word.js');
 
 function Letter(wordLength) {
 	let selectedWord = new Word (this.currentWord);	
-	let wordLength = selectedWord.length;
+	let blankArray = [];
 	this.splitWord = function() {
-		// wordLength = wordLength + "";
-		select = this.wordLength.split("");
-		console.log(this);
-		for (let i = 0; i < select.length; i++) {
-			select[i].push("_ ");
+		let wordLength = selectedWord.currentWord.split("");
+		for (let i = 0; i < wordLength.length; i++) {
+			blankArray.push("_ ");
 		};
 	};
 	this.printWord = function() {
 		console.log("YOUR WORD: " + this.splitWord());
 	}
 	console.log(selectedWord.currentWord);
+	console.log(wordLength)
 };
 
 const currentLetter = new Letter();
