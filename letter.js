@@ -6,12 +6,7 @@ function Letter(wordLength) {
 	let blankArray = [];
 	this.splitWord = function() {
 		let wordLength = selectedWord.currentWord.split("");
-		for (let i = 0; i < wordLength.length; i++) {
-			blankArray.push("_ ");
-		};
-		console.log(selectedWord.currentWord);
 		console.log(wordLength)
-		console.log("YOUR WORD: " + blankArray);
 	};
 };
 
