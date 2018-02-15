@@ -29,7 +29,7 @@ function Player(wordLetters, guessedLetters, matchedLetters, totalGuesses) {
 		};
 	};
 	this.wordView = function(userLetter) {
-		let blankArray = "",
+		let blankArray = "";
 		for (let i = 0; i < this.wordLength.length; i++) {
 			if(this.matchedLetters.indexOf(this.wordLength[i]) !== -1) {
 				blankArray += this.wordLength[i];
