@@ -12,13 +12,17 @@ function Player(wordLetters, guessedLetters, matchedLetters, totalGuesses) {
 		this.guessedLetters = [];
 		this.matchedLetters = [];
 		this.totalGuesses = 15;
-	};
-	this.Guesses = function(userLetter) {
-		if ((this.guessedLetters.indexOf(userLetter) === -1) && (this.wordLetters.indexOf(userLetter) === -1)) {
-			this.guessedLetters.push(userLetter)
-			this.totalGuesses--;
-			console.log(userLetter + ", ");
-		}
+
+		let prompt = inquirer.prompt([
+		{
+			name: "userLetter",
+			message: "Select a letter!",
+			type: "input",
+
+		}]).then(function(response) {
+			response.guesses();
+		})
+	
 	};
 	this.addMatchLetters = function(userLetter) {
 		for (let i = 0; i < this.wordLength.length; i++) {
@@ -55,5 +59,9 @@ function Player(wordLetters, guessedLetters, matchedLetters, totalGuesses) {
 		}
 	};
 };
+
+const userLetter = new Player();
+
+userLetter.startGame();
 
 module.exports = Player;
