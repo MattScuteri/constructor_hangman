@@ -8,17 +8,17 @@ function startGame() {
 		{
 			name: "response",
 			message: "Select a letter!",
-			type: "input",
+			type: "input"
 
 		}]).then(function(response) {
+			userLetter = JSON.stringify(response)
+			console.log(userLetter)
 
-			for (let i = 0; i < response.length; i++) {
-				response[i].startGame();
-				response[i].matchedLetters();
-				response[i].wordView();
-				response[i].updateWins();
-				addMatchLetters(response[i]);
-			}
+			for (let i = 0; i < userLetter.length; i++) {
+				addMatchLetters(userLetter[i]);
+				wordView(userLetter[i]);
+				updateWins(userLetter[i]);
+			};
 		})
 };
 
@@ -32,7 +32,6 @@ function addMatchLetters() {
 	};
 };
 	
-
 function wordView() {
 	let blankArray = "";
 	for (let i = 0; i < this.wordLength.length; i++) {
@@ -63,9 +62,3 @@ function updateWins() {
 };
 
 startGame();
-
-	// userLetter.startGame();
-	// userLetter.guesses();
-	// userLetter.addMatchLetters();
-	// userLetter.wordView();
-	// userLetter.updateWins();
