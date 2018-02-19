@@ -6,13 +6,12 @@ const Player = require("./player.js");
 function startGame() {
 	let prompt = inquirer.prompt([
 		{
-			name: "response",
+			name: "letterInput",
 			message: "Select a letter!",
 			type: "input"
 
 		}]).then(function(response) {
-			userLetter = JSON.stringify(response)
-			console.log(userLetter)
+			console.log(response)
 
 			for (let i = 0; i < userLetter.length; i++) {
 				addMatchLetters(userLetter[i]);
