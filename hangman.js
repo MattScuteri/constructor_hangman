@@ -13,6 +13,10 @@ function startGame() {
 		}]).then(function(response) {
 			console.log(response)
 
+			const userLetter = response['letterAnswer'];
+
+			console.log(userLetter)
+
 			for (let i = 0; i < userLetter.length; i++) {
 				addMatchLetters(userLetter[i]);
 				wordView(userLetter[i]);
