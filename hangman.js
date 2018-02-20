@@ -13,7 +13,7 @@ function startGame() {
 		}]).then(function(response) {
 			console.log(response)
 
-			const userLetter = response['letterAnswer'];
+			const userLetter = response.letterInput;
 
 			console.log(userLetter)
 
